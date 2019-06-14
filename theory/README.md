@@ -8,20 +8,20 @@ Fill out truth tables for the following expressions:
 ```
 A     B     result
 -------------------
-0     0       ?
-0     1       ?
-1     0       ?
-1     1       ?
+0     0       1
+0     1       0
+1     0       1
+1     1       1
 ```
 
 2. `(¬A ∨ B) ∧ ¬(A ∧ ¬B)`   (alternate: `(!A || B) && !(A && !B)`)
 ```
 A     B     result
 -------------------
-0     0       ?
-0     1       ?
-1     0       ?
-1     1       ?
+0     0       1
+0     1       1
+1     0       0
+1     1       1
 ```
 
 3. `¬(A ∨ B) ∨ ( (A ∨ C) ∧ ¬(B ∨ ¬C) )`   (alternate: `!(A || B) || ( (A || C) && !(B || !C) )`)
@@ -29,14 +29,14 @@ A     B     result
 ```
 A     B     C     result
 -------------------------
-0     0     0       ?
-0     0     1       ?
-0     1     0       ?
-0     1     1       ?
-1     0     0       ?
-1     0     1       ?
-1     1     0       ?
-1     1     1       ?
+0     0     0       1
+0     0     1       1
+0     1     0       0
+0     1     1       0
+1     0     0       0
+1     0     1       1
+1     1     0       0
+1     1     1       0
 ```
 
 ## STRETCH GOAL
@@ -58,7 +58,8 @@ This can be represented with boolean algebra like so:
 * `CARRY = A ∧ B`  (alternate: `A && B`)
 
 
-How can you represent the SUM and CARRY of adding THREE digits with a truth table and in boolean algebra?
+How can you represent the SUM and CARRY of adding THREE 
+digits with a truth table and in boolean algebra?
 
 * A + B + C
 ```
