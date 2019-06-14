@@ -19,6 +19,23 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
     // Key at index for limit - weight at i
     int index = hash_table_retrieve(ht, limit - weights[i]);
 
+    if (index != -1)
+    {
+      Answer *answer = malloc(sizeof(Answer));
+
+      if (i > index)
+      {
+        answer->index_1 = i;
+        answer->index_2 = index;
+      }
+      else 
+      {
+        answer->index_1 = index;
+        answer->index_2 = i;
+      }
+      destroy_hash_table(ht);
+      return answer;
+    }
   }
   destroy_hash_table(ht);
   return NULL;
