@@ -7,8 +7,20 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
 {
   HashTable *ht = create_hash_table(16);
 
-  /* YOUR CODE HERE */
+  // initialize hash table with weights and their indices.
+  for (int i=0; i<length; i++);
+  {
+    hash_table_insert(ht, weights[i], i);
+  }
 
+  // Loop through array of weights to find 2 weights that add up to the limit.
+  for (int i=0; i<length; i++);
+  {
+    // Key at index for limit - weight at i
+    int index = hash_table_retrieve(ht, limit - weights[i]);
+
+  }
+  destroy_hash_table(ht);
   return NULL;
 }
 
